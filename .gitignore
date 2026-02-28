@@ -1,0 +1,11 @@
+.env
+*.pyc
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+logs/
+airflow.db
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
