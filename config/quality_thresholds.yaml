@@ -1,0 +1,25 @@
+global:
+  completeness_threshold: 0.99
+  latency_threshold_minutes: 15
+  duplicate_threshold: 0.001
+
+per_entity:
+  patients:
+    completeness_threshold: 0.999
+    required_fields:
+      - patient_id
+      - message_timestamp
+      - message_type
+      - gender
+  encounters:
+    completeness_threshold: 0.995
+    required_fields:
+      - encounter_id
+      - patient_id
+      - encounter_date
+      - provider_id
+
+alerting:
+  slack_channel: "#data-quality-alerts"
+  email: "data-engineering@healthcare.com"
+  alert_on_breach: true
